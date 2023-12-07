@@ -1,8 +1,8 @@
-@import "header";
-@import "footer";
-@import "members";
-@import "about";
-@import "contact";
+@import 'header';
+@import 'footer';
+@import 'members';
+@import 'about';
+@import 'contact';
 
 * {
   box-sizing: border-box;
@@ -44,7 +44,6 @@ body {
 }
 
 @supports (display: grid) {
-  // Media query para estilos en pantallas más grandes
   @media (min-width: 868px) {
     .container-home {
       margin: 0;
@@ -61,7 +60,6 @@ body {
         grid-column: 1 / 6;
         grid-row: 1 / 6;
         object-fit: cover;
-        //justify-self: stretch;
       }
 
       &__catchphrase {
@@ -78,7 +76,7 @@ body {
       }
 
       &__catchphrase1 {
-        padding: 1.5rem; // Ajustado el padding
+        padding: 1.5rem;
         font-size: 1.2em;
         grid-column: 1 / 3;
         grid-row: 3 / 4;
@@ -103,7 +101,7 @@ body {
 
       &__catchphrase2 {
         padding: 1rem;
-        margin: 1rem; // Ajustado el margen
+        margin: 1rem;
         text-align: center;
         font-size: 1.2em;
         grid-column: 1 / 3;
@@ -120,16 +118,17 @@ body {
 @supports (not (display: grid)) {
   @media (min-width: 768px) {
     .container-home {
-      margin: 0;
+      margin: 0 auto;
+      width: 80%;
       line-height: 1.6rem;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
+      text-align: center;
       overflow: hidden;
 
       &__img {
-        padding: 0;
-        width: 100%;
+        width: 90%;
         object-fit: cover;
       }
 
@@ -166,6 +165,7 @@ body {
       }
 
       &__catchphrase2 {
+        top: 650;
         padding: 1rem;
         margin: 1rem;
         text-align: center;
