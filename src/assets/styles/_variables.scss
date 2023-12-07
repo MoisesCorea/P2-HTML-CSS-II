@@ -1,12 +1,54 @@
 @use "sass:color";
 
+//fuentes
+
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$header-font: "Galatia SIL", Georgia, serif;
+$body-font: "Avenir Book", "Franklin Gothic Medium", Helvetica, Arial,
+  sans-serif;
 
-$mqMinWidth: 420px;
+// variables para colores
+$secondary-color: #83894b;
+$color-corporate: #1e3148;
+
+$primary_color_lch: lch(19.57% 17.04 263.46); //función de color moderno
+$secondary-color-lch: lch(55.5% 33.66 106.49);
+$third-color-lch: lch(100% 0 0);
+
+//personalización bootstrap
+
+$spacer: 1.5rem;
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25,
+  ),
+  2: (
+    $spacer * 0.5,
+  ),
+  3: $spacer,
+  4: (
+    $spacer * 1.5,
+  ),
+  5: (
+    $spacer * 3,
+  ),
+  6: (
+    $spacer * 3.5,
+  ),
+);
+
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem,
+  7: 2rem,
+  8: 1.5rem,
+);

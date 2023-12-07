@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/main.scss"
+        />
+        <title>Miembros</title>
+    </head>
+    <body>
+        <include src="./views/header.html"></include>
+        <main class="container mt-5 mb-6">
+            <form id="contactForm" class="form">
+                <legend>Contacto</legend>
+                <p class="pt-2">
+                    Puedes escribirnos tus sugerencias mediante este formulario,
+                    estaremos contentos de recibirlas
+                </p>
+                <div class="form-group pt-2">
+                    <label for="name">Nombre:</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        required
+                    />
+                </div>
+                <div class="form-group pt-3">
+                    <label for="email">Correo electrónico:</label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        required
+                    />
+                </div>
+                <div class="form-group pt-3">
+                    <label for="message">Mensaje:</label>
+                    <textarea
+                        class="form-control"
+                        id="message"
+                        name="message"
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+                <div class="form-group pt-3">
+                    <button type="submit" class="btn btn-mode">Enviar</button>
+                </div>
+            </form>
+        </main>
+        <include src="./views/footer.html"></include>
+        <script type="module" src="./assets/scripts/main.js"></script>
+    </body>
+</html>

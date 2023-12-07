@@ -1,0 +1,53 @@
+@layer pseudoclase_has, utilities;
+
+:is(.dt-1, .dt-2, .dt-3) {
+  padding-left: 0;
+  color: $secondary-color;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+@layer pseudoclase_has {
+  .row:has(p, dt) {
+    text-align: justify;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+}
+
+@layer utilities {
+  .figure {
+    position: relative;
+
+    & span {
+      text-align: center;
+      position: absolute;
+      top: 20;
+      left: 40;
+      color: white;
+      font-weight: bold;
+      width: 40%;
+      background-color: rgba(30, 49, 72, 0.5);
+    }
+  }
+
+  .dt-1::before {
+    content: "\2460";
+    color: $secondary-color;
+    font-size: 1.5em;
+    margin-right: 0.2em;
+  }
+
+  .dt-2::before {
+    content: "\2461";
+    color: $secondary-color;
+    font-size: 1.5em;
+    margin-right: 0.2em;
+  }
+
+  .dt-3::before {
+    content: "\2462";
+    color: $secondary-color;
+    font-size: 1.5em;
+    margin-right: 0.2em;
+  }
+}

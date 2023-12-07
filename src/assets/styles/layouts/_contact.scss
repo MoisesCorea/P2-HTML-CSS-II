@@ -1,0 +1,38 @@
+@layer layout;
+
+form {
+  container-type: inline-size;
+  container-name: form-contact;
+
+  color: $primary_color_lch;
+  width: 75%;
+  margin: 0 auto;
+
+  & legend {
+    color: $secondary-color-lch;
+    font-weight: bold;
+  }
+
+  :is(input[type="text"]:focus, input[type="email"]:focus, textarea:focus) {
+    border-color: $secondary-color-lch;
+    box-shadow: 0 0 5px $secondary-color-lch;
+    outline: none;
+  }
+
+  & .btn-mode {
+    background-color: $primary_color-lch;
+    color: $third-color-lch;
+  }
+
+  & .btn-mode:hover {
+    background-color: $secondary-color-lch;
+  }
+}
+
+@layer layout {
+  @container form-contact (min-width: 768px) {
+    form {
+      width: 60%;
+    }
+  }
+}

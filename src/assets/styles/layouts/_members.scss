@@ -1,0 +1,65 @@
+@layer layer, layout;
+
+@layer layer {
+  .container-members {
+    container-type: inline-size;
+    container-name: flex-card;
+    text-align: center;
+    width: 96%;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 0 auto;
+
+    &__title {
+      padding-bottom: 5rem;
+      font-weight: bold;
+    }
+
+    &__cards {
+      margin-bottom: 5rem;
+
+      &__card {
+        background-color: #f8f8f8;
+        padding: 1rem;
+        margin-bottom: 1rem;
+
+        &-img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          padding-bottom: 1rem;
+        }
+
+        &-title {
+          margin-top: 1rem;
+          font-size: 1.2rem;
+        }
+
+        &-info {
+          font-size: 1rem;
+          color: #555;
+        }
+      }
+    }
+  }
+}
+
+@layer layout {
+  @container flex-card (min-width: 768px) {
+    .container-members {
+      width: 80%;
+
+      &__cards {
+        display: flex;
+        justify-content: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+        &__card {
+          flex-basis: calc(33.3333% - 1rem);
+        }
+      }
+    }
+  }
+}
