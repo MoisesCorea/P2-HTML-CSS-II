@@ -10,7 +10,7 @@
 @layer pseudoclase_has {
   .row:has(p, dt) {
     text-align: justify;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 }
 
@@ -31,21 +31,21 @@
   }
 
   .dt-1::before {
-    content: "\2460";
+    content: '\2460';
     color: $secondary-color;
     font-size: 1.5em;
     margin-right: 0.2em;
   }
 
   .dt-2::before {
-    content: "\2461";
+    content: '\2461';
     color: $secondary-color;
     font-size: 1.5em;
     margin-right: 0.2em;
   }
 
   .dt-3::before {
-    content: "\2462";
+    content: '\2462';
     color: $secondary-color;
     font-size: 1.5em;
     margin-right: 0.2em;
