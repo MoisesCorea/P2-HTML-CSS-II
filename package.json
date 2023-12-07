@@ -10,7 +10,8 @@
     "dev": "npm-run-all clean stylelint parcel:serve",
     "build": "npm-run-all clean parcel:build",
     "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
-    "stylelint": "stylelint src/**/*.scss"
+    "stylelint": "stylelint src/**/*.scss",
+    "format": "prettier --write ."
   },
   "web": "dist/index.html",
   "targets": {
@@ -51,8 +52,6 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.2",
-    "chroma-sass": "^1.2.6",
-    "color-convert": "^2.0.1",
     "fontawesome": "^5.6.3",
     "prettier": "^3.1.0"
   }
